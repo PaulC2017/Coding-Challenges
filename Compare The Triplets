@@ -1,0 +1,33 @@
+comment = """The problem statement can be found here:
+
+https://www.hackerrank.com/challenges/compare-the-triplets/problem
+
+#!/bin/python3 """
+
+import os
+import sys
+
+
+def solve(a0, a1, a2, b0, b1, b2):
+    alice= [a0, a1, a2]
+    bob = [b0, b1, b2]
+    alicePoints = 0
+    bobPoints = 0
+    for i in range(len(alice)):
+        if alice[i] > bob[i]:
+            alicePoints +=1
+        elif bob[i] > alice[i]:
+            bobPoints +=1
+    return (alicePoints, bobPoints)
+
+
+a0 = 5
+a1= 6
+a2 = 7
+b0=3
+b1=6
+b2=10
+
+answer = (solve(a0, a1, a2, b0, b1, b2))
+print(answer)
+
