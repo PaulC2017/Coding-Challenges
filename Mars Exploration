@@ -1,0 +1,40 @@
+See problem statement here:
+
+https://www.hackerrank.com/challenges/mars-exploration/problem
+
+____
+
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+class Solution {
+
+    static int marsExploration(string s) 
+    {
+        int corruptedLetters = 0;
+        char S = 'S';
+        char O = 'O';
+        foreach (char c in s)
+        {
+           if ( c.CompareTo(S) == 0 || c.CompareTo(O) == 0)
+           {
+               continue;
+           }
+           else 
+           {
+               corruptedLetters +=1;
+           }
+            
+        }
+     return corruptedLetters;
+    }
+
+    static void Main(String[] args) {
+        string s = Console.ReadLine();
+        int result = marsExploration(s);
+        Console.WriteLine(result);
+    }
+}
+
