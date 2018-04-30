@@ -1,3 +1,5 @@
+comments = 
+
 """ Consider a staircase of size :
    #
   ##
@@ -29,9 +31,6 @@ The staircase is right-aligned, composed of # symbols and spaces, and has a heig
 import os
 import sys
 
-#
-# Complete the staircase function below.
-#
 def staircase(n):
     spaces = n-1
     numOfHashes = 1
