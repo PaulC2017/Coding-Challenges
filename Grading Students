@@ -1,0 +1,39 @@
+See problem description here:
+
+https://www.hackerrank.com/challenges/grading/problem
+
+
+#!/bin/python3
+
+import os
+import sys
+
+
+def gradingStudents(grades):
+    
+    curveGrades = []
+    for i in range(len(grades)):
+        if (5- (grades[i] % 5)) < 3:
+            if ( 5-(grades[i] % 5) + grades[i]) >= 40:
+                grades[i] = (5 - (grades[i] % 5) + grades[i])
+        curveGrades.append(grades[i])
+    return curveGrades
+    
+if __name__ == '__main__':
+    f = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    grades = []
+
+    for _ in range(n):
+        grades_item = int(input())
+        grades.append(grades_item)
+
+    result = gradingStudents(grades)
+
+    f.write('\n'.join(map(str, result)))
+    f.write('\n')
+
+    f.close()
+
