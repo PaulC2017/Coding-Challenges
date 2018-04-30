@@ -1,3 +1,31 @@
-See problem statement here:
+comment = """See problem statement here:
 
-https://www.hackerrank.com/challenges/mars-exploration/problem
+https://www.hackerrank.com/challenges/mars-exploration/problem """
+
+
+#!/bin/python3
+
+import sys
+
+def marsExploration(s):
+    # Complete this function
+
+    corruptedLetters = 0
+    S = 'S';
+    O = 'O';
+    for c in s:
+        
+        if ( c == S)or (c == O):
+           
+            continue;
+           
+        else:
+           
+            corruptedLetters +=1;
+           
+    return corruptedLetters
+
+if __name__ == "__main__":
+    s = input().strip()
+    result = marsExploration(s)
+    print(result)
