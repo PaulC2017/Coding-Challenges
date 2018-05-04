@@ -1,0 +1,36 @@
+The problem statement can be found here:
+
+https://www.hackerrank.com/challenges/diagonal-difference/problem
+
+_______
+
+def diagonalDifference(a):
+    totalIterations = 0
+    primaryDiagSum = 0
+    secondaryDiagSum = 0
+    for i in range(0,len(a),4):
+        if totalIterations < 3:
+            primaryDiagSum = primaryDiagSum + a[i]
+            totalIterations +=1
+    print("Start of sec")
+    totalIterations = 0
+    for i in range(2,len(a),2):
+        if totalIterations < 3:
+            print("a[i] = ", a[i])
+            print("sec = " ,secondaryDiagSum)
+            secondaryDiagSum = secondaryDiagSum + a[i]
+            totalIterations +=1
+    print("sec = ", secondaryDiagSum)
+    return abs(primaryDiagSum - secondaryDiagSum)
+
+
+b = []
+b.append(11)
+b.append(2)
+b.append(4)
+b.append(4)
+b.append(5)
+b.append(6)
+b.append(10)
+b.append(8)
+b.append(-12)
